@@ -7,4 +7,8 @@ def hello(request):
     return render(request, 'listings/hello.html',{'bands': bands})
 
 def about(request):
-    return HttpResponse('<h1>About Us</h1> <p>We love merch!</p>')
+    return render(request, 'listings/about.html')
+
+def contact(request):
+    return render(request, 'listings/contact.html')
+
