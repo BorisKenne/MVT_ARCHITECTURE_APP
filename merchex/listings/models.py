@@ -7,7 +7,7 @@ class Band(models.Model):
         ALTERNATIVE_ROCK = 'AR'
 
     name = models.fields.CharField(max_length=100)
-    genre = models.fields.CharField(max_length=50)
+    genre = models.fields.CharField(choices=Genre.choices,max_length=5)
     biography = models.fields.CharField(max_length=1000)
     year_formed = models.fields.IntegerField(validators=[MinValueValidator(1900),MaxValueValidator(2021)])
     active = models.fields.BooleanField(default=True)
