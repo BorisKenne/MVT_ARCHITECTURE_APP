@@ -4,8 +4,8 @@ class Band(models.Model):
     class Genre(models.TextChoices):
         HIP_HOP = 'HH'
         SYNTH_POP = 'SP'
-        ALTERNATIVE_ROCK = 'AR
-        
+        ALTERNATIVE_ROCK = 'AR'
+
     name = models.fields.CharField(max_length=100)
     genre = models.fields.CharField(max_length=50)
     biography = models.fields.CharField(max_length=1000)
