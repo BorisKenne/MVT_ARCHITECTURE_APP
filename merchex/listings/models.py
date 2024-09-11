@@ -23,4 +23,4 @@ class Listing(models.Model):
     description = models.fields.CharField(max_length=500)
     sold = models.fields.BooleanField(default=False)
     year = models.fields.IntegerField(null=True)
-    Type = models.fields.CharField(choices=Types.choices,max_length=15)
+    Type = models.fields.CharField(choices=Types.choices,default ='Clothing',max_length=15)
