@@ -22,6 +22,7 @@ class Listing(models.Model):
         Posters = 'Posters'
         Miscellaneous = 'Miscellaneous'
 
+    title = models.fields.CharField(max_length=100)
     description = models.fields.CharField(max_length=500)
     sold = models.fields.BooleanField(default=False)
     year = models.fields.IntegerField(null=True)
