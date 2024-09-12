@@ -7,7 +7,8 @@ def band_list(request):
     return render(request, 'listings/band_list.html',{'bands': bands})
 
 def band_detail(request, id):
-    return render(request,'listings/band_detail.html',{'id':id})
+     band = Band.objects.get(id=id)
+     return render(request,'listings/band_detail.html',{'band':band})
 
 def about(request):
     return render(request, 'listings/about.html')
