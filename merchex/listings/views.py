@@ -4,6 +4,7 @@ from listings.models import Band
 from listings.models import Listing
 from listings.forms import ContactUsForm
 from django.core.mail import send_mail
+from django.shortcuts import redirect
 
 def band_list(request):
     bands = Band.objects.all()
@@ -34,6 +35,7 @@ def contact(request):
                 from_email=form.cleaned_data['email'],
                 recipient_list=['boriskf25@gmail.com'],
            )
+            return redirect('contact')
       else:
            form = ContactUsForm()
       return render(request, 'listings/contact.html',{'form': form})
