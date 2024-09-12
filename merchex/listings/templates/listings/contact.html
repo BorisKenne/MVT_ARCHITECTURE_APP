@@ -6,8 +6,12 @@
     N'hésitez pas à nous contacter, que ce soit pour des informations supplémentaires sur nos produits, des conseils d'achat, 
     ou des questions techniques. Notre équipe se fera un plaisir de vous répondre dans les plus brefs délais.
 </p>
-<p>
-    Vous pouvez nous joindre par e-mail à <a href="mailto:support@merchex.com">support@merchex.com</a> ou via notre formulaire de contact.
-    Nous apprécions vos retours et sommes là pour vous aider !
-</p>
+
+<p>We're here to help.</p>
+
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
 {% endblock %}
