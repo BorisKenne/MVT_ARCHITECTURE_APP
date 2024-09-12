@@ -24,6 +24,9 @@ def about(request):
     return render(request, 'listings/about.html')
 
 def contact(request):
-      form = ContactUsForm()
+      if request.method =='POST':
+           form = ContactUsForm(request.POST)
+      else:
+           form = ContactUsForm()
       return render(request, 'listings/contact.html',{'form': form})
 
