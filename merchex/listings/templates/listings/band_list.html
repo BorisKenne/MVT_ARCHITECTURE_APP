@@ -5,7 +5,7 @@
 
 <ul>
  {% for band in bands %}
-  <li><a href="/bands/{{ band.id }}/">{{ band.name }}</a></li>
+  <li><a href="{% url 'band-detail' band.id %}">{{ band.name }}</a></li>
  {% endfor %}
 </ul>
 
