@@ -111,3 +111,5 @@ def contact(request):
            form = ContactUsForm()
       return render(request, 'listings/contact.html',{'form': form})
 
+def welcome(request):
+     return render(request,'listings/welcome.html')
