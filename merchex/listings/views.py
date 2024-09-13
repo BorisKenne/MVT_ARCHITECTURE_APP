@@ -83,6 +83,16 @@ def listing_update(request, id):
                                 'listings/listing_update.html',
                                 {'form': form})
 
+def listing_delete(request, id):
+    listing = Listing.objects.get(id=id)
+    if request.method =='POST':
+         listing.delete()
+         return redirect('listing-list')
+    else:
+     return render(request,
+                'listings/listing_delete.html',
+                {'band': listing})
+
 def about(request):
     return render(request, 'listings/about.html')
 
