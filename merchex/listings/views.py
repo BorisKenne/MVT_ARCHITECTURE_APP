@@ -104,7 +104,7 @@ def contact(request):
                 subject=f'Message from {form.cleaned_data["name"] or "anonymous"} via MerchEx Contact Us form',
                 message=form.cleaned_data['message'],
                 from_email=form.cleaned_data['email'],
-                recipient_list=['boriskf25@gmail.com'],
+                recipient_list=['yourmail@yourmail.com'],
            )
             return redirect('contact')
       else:
