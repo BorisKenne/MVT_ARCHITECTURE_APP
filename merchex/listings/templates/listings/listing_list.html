@@ -5,7 +5,11 @@
 <a href="{% url 'listing-create' %}">Create new List</a>
 <ul>
  {% for listing in listings %}
-  <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a></li>
+  <li>
+    <a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}
+        - <a href="{% url 'listing-update' listing.id %}">[edit]</a>
+    </a>
+   </li>
  {% endfor %}
 </ul>
 
