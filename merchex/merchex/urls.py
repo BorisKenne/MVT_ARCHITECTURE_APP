@@ -32,5 +32,5 @@ urlpatterns = [
     path('listings/add/', views.listing_create, name='listing-create'),
     path('listings/<int:id>/change', views.listing_update, name='listing-update'),
     path('listings/<int:id>/delete', views.listing_delete, name='listing-delete'),
-    path('', views.welcome, name='welcome'),
+    path('', views.welcome, name='home'),
 ]
