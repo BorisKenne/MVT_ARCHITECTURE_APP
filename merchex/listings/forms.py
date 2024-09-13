@@ -8,4 +8,4 @@ class ContactUsForm(forms.Form):
 class BandForm(forms.ModelForm):
    class Meta:
       model = Band
-      fields = '__all__'
+      exclude = ('active', 'official_homepage')
